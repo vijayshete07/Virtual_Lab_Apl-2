@@ -1,0 +1,48 @@
+/* Ensure the root and body take up the full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+main {
+  flex-grow: 1; /* This makes the main content take up the available space */
+}
+
+footer {
+  margin-top: auto; /* Footer will stick to the bottom */
+  background-color: #1976d2; /* Dark blue background */
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+nav {
+  background-color: #1976d2; /* Dark blue background */
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Additional global styles for font */
+body, h1, h2, h3, p, a {
+  font-family: Arial, sans-serif;
+}
+
+/* Optional: Add padding for main content */
+main {
+  padding: 20px;
+}

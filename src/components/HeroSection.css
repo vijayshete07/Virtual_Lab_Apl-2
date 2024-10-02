@@ -1,0 +1,42 @@
+/* src/components/HeroSection.css */
+.hero-container {
+  position: relative; /* Make sure the container is positioned relatively */
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  position: absolute; /* Position the content on top of the slider */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the content */
+}
+
+.hero-container h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-container p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #FF4500; /* Orange button color */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e03e00; /* Darken button on hover */
+}

@@ -1,0 +1,72 @@
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Ensures it takes full width of the container */
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures no space below the image */
+  }
+  
+  .slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .slider-button {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .slider-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Change on hover */
+  }
+  
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #717171; /* Color of active dot */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .slider-button {
+      font-size: 20px; /* Smaller buttons for mobile */
+      padding: 8px;
+    }
+  
+    .dot {
+      height: 8px;
+      width: 8px;
+    }
+  }
+  
