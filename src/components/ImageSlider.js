@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './ImageSlider.css'; // Ensure you have appropriate CSS for styling
 
 const images = [
-  '/images/pexels-njeromin-18112365.jpg',
-  '/images/pexels-njeromin-12149150.jpg',
-  '/images/pexels-njeromin-14530325.jpg',
+  '/images/img.jpg',
+  '/images/img2.jpg',
+  '/images/img3.jpg',
 ];
 
 function ImageSlider() {

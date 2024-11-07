@@ -1,6 +1,6 @@
 // src/components/Navbar.js
 import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText, Divider } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 
@@ -22,7 +22,7 @@ function Navbar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" style={{ flexGrow: 1 }}>
-            Virtual Lab
+            EduQuest e-Learning Platform
           </Typography>
           <Button color="inherit" component={Link} to="/" style={{ color: '#FFFFFF' }}>
             Home
@@ -30,36 +30,58 @@ function Navbar() {
           <Button color="inherit" component={Link} to="/about" style={{ color: '#FFFFFF' }}>
             About
           </Button>
-          <Button color="inherit" component={Link} to="/lab" style={{ color: '#FFFFFF' }}>
-            Lab
-          </Button>
-          <Button color="inherit" component={Link} to="/contact" style={{ color: '#FFFFFF' }}>
-            Contact
-          </Button>
         </Toolbar>
       </AppBar>
 
-      {/* Drawer Component */}
-      <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+      <Drawer
+        anchor="left"
+        open={drawerOpen}
+        onClose={toggleDrawer(false)}
+        PaperProps={{
+          sx: {
+            width: 200, // Fixed width for the drawer
+            left: '10px', // Leave space from the left of the screen
+            position: 'absolute', // Set position to absolute for better control
+          },
+        }}
+      >
         <div
           role="presentation"
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
-          style={{ width: '250px' }} // Drawer width
+          className="drawer-content"
         >
           <List>
-            {/* Drawer Menu Items */}
-            <ListItem button component={Link} to="/">
-              <ListItemText primary="Home" />
+            <ListItem button component={Link} to="/aim" className="drawer-item">
+              <ListItemText primary="Aim" />
             </ListItem>
-            <ListItem button component={Link} to="/about">
-              <ListItemText primary="About" />
+            <Divider />
+            <ListItem button component={Link} to="/theory" className="drawer-item">
+              <ListItemText primary="Theory" />
             </ListItem>
-            <ListItem button component={Link} to="/lab">
-              <ListItemText primary="Lab" />
+            <Divider />
+            <ListItem button component={Link} to="/pretest" className="drawer-item">
+              <ListItemText primary="Pretest" />
             </ListItem>
-            <ListItem button component={Link} to="/contact">
-              <ListItemText primary="Contact" />
+            <Divider />
+            <ListItem button component={Link} to="/procedure" className="drawer-item">
+              <ListItemText primary="Procedure" />
+            </ListItem>
+            <Divider />
+            <ListItem button component={Link} to="/simulation" className="drawer-item highlighted-item">
+              <ListItemText primary="Simulation" />
+            </ListItem>
+            <Divider />
+            <ListItem button component={Link} to="/posttest" className="drawer-item">
+              <ListItemText primary="Posttest" />
+            </ListItem>
+            <Divider />
+            <ListItem button component={Link} to="/references" className="drawer-item">
+              <ListItemText primary="References" />
+            </ListItem>
+            <Divider />
+            <ListItem button component={Link} to="/feedback" className="drawer-item">
+              <ListItemText primary="Feedback" />
             </ListItem>
           </List>
         </div>

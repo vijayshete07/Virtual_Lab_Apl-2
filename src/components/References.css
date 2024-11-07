@@ -1,0 +1,24 @@
+.reference-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    min-height: calc(100vh - 200px); /* Adjust height minus header/footer (you can tweak this value) */
+    padding: 40px 20px;
+    background-color: bisque;
+}
+
+.reference-list {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 20px; /* Adjust the indentation */
+    text-align: left; /* Align text to the left */
+}
+
+.reference-link {
+    color: #1976d2; /* Same as your previous link color */
+    text-decoration: none; /* No underline */
+}
+
+.reference-link:hover {
+    text-decoration: underline; /* Underline the link on hover */
+}

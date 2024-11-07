@@ -1,13 +1,12 @@
-/* src/components/HeroSection.css */
 .hero-container {
   position: relative; /* Make sure the container is positioned relatively */
   height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   text-align: center;
-  color: white;
+  color: white; /* Default text color */
 }
 
 .hero-content {
@@ -15,16 +14,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* Center the content */
+  text-align: center; /* Center text within the content */
 }
 
-.hero-container h1 {
+.hero-content h1 {
   font-size: 48px;
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Space between h1 and p */
+  color: antiquewhite; /* Change the color of the h1 text here */
 }
 
 .hero-container p {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin: 20px 0; /* Add top and bottom margins for spacing */
 }
 
 .btn {
@@ -35,6 +36,7 @@
   border-radius: 5px;
   font-size: 18px;
   transition: background-color 0.3s ease;
+  position: left;
 }
 
 .btn:hover {

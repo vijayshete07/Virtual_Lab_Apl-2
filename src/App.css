@@ -1,48 +1,22 @@
-/* Ensure the root and body take up the full height */
+/* App.css */
+
+/* Ensure the body and html take the full height */
 html, body {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, sans-serif;
+  height: 100%; /* Full height for body */
+  margin: 0; /* Remove default margins */
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
+/* Main app container */
 .App {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Ensure the app takes at least the full height of the viewport */
 }
 
-main {
-  flex-grow: 1; /* This makes the main content take up the available space */
+/* Main content area */
+.main-content {
+  flex: 1; /* Allow the main content area to grow and fill the available space */
+  display: flex; /* Ensure it can hold navbar and main content */
+  flex-direction: column; /* Stack children vertically */
 }
 
-footer {
-  margin-top: auto; /* Footer will stick to the bottom */
-  background-color: #1976d2; /* Dark blue background */
-  padding: 10px;
-  color: white;
-  text-align: center;
-}
-
-nav {
-  background-color: #1976d2; /* Dark blue background */
-}
-
-footer p {
-  margin: 0;
-}
-
-/* Additional global styles for font */
-body, h1, h2, h3, p, a {
-  font-family: Arial, sans-serif;
-}
-
-/* Optional: Add padding for main content */
-main {
-  padding: 20px;
-}

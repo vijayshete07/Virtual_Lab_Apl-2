@@ -1,16 +1,21 @@
-.drawer-paper {
-    background-color: #f5f5f5;  /* Example: Light background */
-  }
-  
-  .menu-icon {
-    color: purple;  /* Example: Icon color */
-  }
-  
-  .menu-text {
-    font-weight: bold;  /* Example: Bold text */
-  }
-  
-  .divider {
-    background-color: gray;  /* Divider color */
-  }
-  
+.drawer-content {
+  width: 200px; /* Width of the drawer */
+  padding-left: 10px; /* Additional padding */
+}
+
+.drawer-item .MuiListItemText-primary {
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  color: #003366; /* Dark blue text color */
+  transition: color 0.3s ease;
+}
+
+.drawer-item:hover .MuiListItemText-primary {
+  color: #FF4500; /* Orange on hover */
+}
+
+
+
+.MuiDivider-root {
+  margin: 0; /* Keep dividers thin and consistent */
+}

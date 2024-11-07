@@ -1,28 +1,22 @@
 import React, { useState } from 'react';
-import {
-  Drawer, List, ListItem, ListItemText, IconButton, ListItemIcon, Divider
-} from '@mui/material';
-import HomeIcon from '@mui/icons-material/Home';            
-import InfoIcon from '@mui/icons-material/Info';            
-import ContactMailIcon from '@mui/icons-material/ContactMail';  
-import ScienceIcon from '@mui/icons-material/Science';      
-import MenuIcon from '@mui/icons-material/Menu';            
-import './LeftDrawer.css';                                  
+import { Drawer, List, ListItem, ListItemText, IconButton, Divider } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
+import './LeftDrawer.css'; // Custom CSS file for styling the drawer
 
 function LeftDrawer() {
   const [open, setOpen] = useState(false);
 
-  // Function to toggle drawer
-  const toggleDrawer = (isOpen) => (event) => {
+  const toggleDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-    setOpen(isOpen);
+    setOpen(open);
   };
 
   return (
     <div>
-      {/* Menu Icon to toggle the drawer */}
+      {/* Menu Icon to open the drawer */}
       <IconButton
         edge="start"
         color="inherit"
@@ -32,53 +26,23 @@ function LeftDrawer() {
         <MenuIcon />
       </IconButton>
 
-      {/* Left-side Drawer */}
-      <Drawer
-        anchor="left"
-        open={open}
-        onClose={toggleDrawer(false)}
-        PaperProps={{ className: 'drawer-paper' }} // Add custom styling if needed
-      >
+      {/* Drawer with list items */}
+      <Drawer anchor="left" open={open} onClose={toggleDrawer(false)}>
         <div
           role="presentation"
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
-          style={{ width: '250px' }} // Set drawer width
+          className="drawer-content"
         >
           <List>
-            {/* Home Menu Item */}
-            <ListItem button>
-              <ListItemIcon>
-                <HomeIcon className="menu-icon" style={{ fontSize: '40px' }} /> {/* Icon size increased */}
-              </ListItemIcon>
-              <ListItemText primary="Home" className="menu-text" />
+            <ListItem button component={Link} to="/" className="drawer-item">
+              <ListItemText primary="Home" />
             </ListItem>
-
-            {/* About Menu Item */}
-            <ListItem button>
-              <ListItemIcon>
-                <InfoIcon className="menu-icon" style={{ fontSize: '40px' }} /> {/* Icon size increased */}
-              </ListItemIcon>
-              <ListItemText primary="About" className="menu-text" />
+            <Divider />
+            <ListItem button component={Link} to="/about" className="drawer-item">
+              <ListItemText primary="About" />
             </ListItem>
-
-            {/* Contact Menu Item */}
-            <ListItem button>
-              <ListItemIcon>
-                <ContactMailIcon className="menu-icon" style={{ fontSize: '40px' }} /> {/* Icon size increased */}
-              </ListItemIcon>
-              <ListItemText primary="Contact" className="menu-text" />
-            </ListItem>
-
-            <Divider className="divider" /> {/* Divider for separating sections */}
-
-            {/* Lab Menu Item */}
-            <ListItem button>
-              <ListItemIcon>
-                <ScienceIcon className="menu-icon" style={{ fontSize: '40px' }} /> {/* Icon size increased */}
-              </ListItemIcon>
-              <ListItemText primary="Lab" className="menu-text" />
-            </ListItem>
+            <Divider />
           </List>
         </div>
       </Drawer>

@@ -1,0 +1,9 @@
+.quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: left; /* Vertically center the content */
+    align-items: left; /* Horizontally center the content */
+    min-height: calc(100vh - 200px); /* Adjust height minus header/footer (you can tweak this value) */
+    padding: 40px 20px;
+    background-color: bisque;
+}

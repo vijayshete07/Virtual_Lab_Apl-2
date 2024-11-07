@@ -8,9 +8,8 @@ function HeroSection() {
     <div className="hero-container">
       <ImageSlider /> {/* Use ImageSlider here */}
       <div className="hero-content">
-        <h1>Welcome to Virtual Labs</h1>
-        <p>Experience labs like never before</p>
-        <a href="#labs" className="btn">Explore Labs</a>
+         {/* Centered paragraph */}
+        
       </div>
     </div>
   );
