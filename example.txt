@@ -1,2 +1,0 @@
-Hello, Its Utkarsh
-This is "example.txt file"
